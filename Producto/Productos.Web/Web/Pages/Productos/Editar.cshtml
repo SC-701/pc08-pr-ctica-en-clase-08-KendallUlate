@@ -1,0 +1,82 @@
+﻿@page "{id:guid}"
+@model Web.Pages.Productos.EditarModel
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="edit-card">
+
+                <div class="edit-header">
+                    <div class="header-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="header-title">
+                        <h1>Editar producto</h1>
+                        <p>Actualiza la información del producto</p>
+                    </div>
+                </div>
+
+                <div class="edit-body">
+                    <form method="post">
+                        <input type="hidden" asp-for="Producto.Id" />
+                        <input asp-for="Producto.IdSubCategoria" />
+
+                        <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label asp-for="Producto.Nombre" class="field-label"></label>
+                                <input asp-for="Producto.Nombre" class="field-input" />
+                                <span asp-validation-for="Producto.Nombre" class="field-error"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label asp-for="Producto.Precio" class="field-label"></label>
+                                <input asp-for="Producto.Precio" class="field-input" />
+                                <span asp-validation-for="Producto.Precio" class="field-error"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label asp-for="Producto.Stock" class="field-label"></label>
+                                <input asp-for="Producto.Stock" class="field-input" />
+                                <span asp-validation-for="Producto.Stock" class="field-error"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label asp-for="Producto.CodigoBarras" class="field-label"></label>
+                                <input asp-for="Producto.CodigoBarras" class="field-input" />
+                                <span asp-validation-for="Producto.CodigoBarras" class="field-error"></span>
+                            </div>
+
+                            <div class="form-field full-width">
+                                <label asp-for="Producto.Descripcion" class="field-label"></label>
+                                <textarea asp-for="Producto.Descripcion" class="field-input" rows="4"></textarea>
+                                <span asp-validation-for="Producto.Descripcion" class="field-error"></span>
+                            </div>
+
+                            <div class="form-field full-width">
+                                <label class="field-label">Subcategoría</label>
+                                <input asp-for="Producto.SubCategoria" class="field-input" readonly />
+                            </div>
+                        </div>
+
+                        <div class="action-bar">
+                            <a asp-page="./Index" class="btn btn-outline-secondary">
+                                <i class="fas fa-times"></i> Cancelar
+                            </a>
+                            <div class="action-group">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-save"></i> Guardar cambios
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

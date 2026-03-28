@@ -1,0 +1,271 @@
+{
+  "info": {
+    "_postman_id": "6e9214ce-126d-4c01-97d3-0d9c0983f19f",
+    "name": "Progra_Av",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42480059"
+  },
+  "item": [
+    {
+      "name": "Vehiculos",
+      "item": [
+        {
+          "name": "Agregar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7037/Agregar",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7037",
+              "path": [
+                "Agregar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Editar",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7037/Editar",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7037",
+              "path": [
+                "Editar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7037/Eliminar",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7037",
+              "path": [
+                "Eliminar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener uno",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7037/Obtener uno/{Id}",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7037",
+              "path": [
+                "Obtener uno",
+                "{Id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Todos",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Productos",
+      "item": [
+        {
+          "name": "Agregar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7197/api/Producto",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7197",
+              "path": [
+                "api",
+                "Producto"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Editar",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7197/Editar",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7197",
+              "path": [
+                "Editar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7197/Eliminar",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7197",
+              "path": [
+                "Eliminar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7197/ObtenerTodos",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7197",
+              "path": [
+                "ObtenerTodos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener uno",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7197/ObtenerTodos/{Id}",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7197",
+              "path": [
+                "ObtenerTodos",
+                "{Id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tipo de Cambio",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCQ0NSLVNEREUiLCJzdWIiOiJrdWxhdGUwMDc4OEB1ZmlkZS5hYy5jciIsImF1ZCI6IlNEREUtU2l0aW9FeHRlcm5vIiwiZXhwIjoyNTM0MDIzMDA4MDAsIm5iZiI6MTc3MDY5MTI4NiwiaWF0IjoxNzcwNjkxMjg2LCJqdGkiOiJmNWIzY2ZiZC0xYWNiLTQ1ZGItOGQ0My1hZmE4YTc2MDI2MjciLCJlbWFpbCI6Imt1bGF0ZTAwNzg4QHVmaWRlLmFjLmNyIn0.IfiUas7nJ6j4RiLpelrY3mDAguLgZ7s6W1uC6OumASA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://apim.bccr.fi.cr/SDDE/api/Bccr.GE.SDDE.Publico.Indicadores.API/cuadro/491/series?fechaInicio=2026/02/08&fechaFin=2026/02/08&idioma=ES",
+              "protocol": "https",
+              "host": [
+                "apim",
+                "bccr",
+                "fi",
+                "cr"
+              ],
+              "path": [
+                "SDDE",
+                "api",
+                "Bccr.GE.SDDE.Publico.Indicadores.API",
+                "cuadro",
+                "491",
+                "series"
+              ],
+              "query": [
+                {
+                  "key": "fechaInicio",
+                  "value": "2026/02/08"
+                },
+                {
+                  "key": "fechaFin",
+                  "value": "2026/02/08"
+                },
+                {
+                  "key": "idioma",
+                  "value": "ES"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+﻿@page "{id:guid}"
+@model Web.Pages.Productos.EliminarModel
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="delete-card">
+
+                <div class="delete-header">
+                    <div class="header-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="header-title">
+                        <h1>Eliminar producto</h1>
+                        <p>Confirma si deseas eliminar este producto</p>
+                    </div>
+                </div>
+
+                <div class="delete-body">
+                    <form method="post">
+                        <input type="hidden" asp-for="Producto.Id" />
+
+                        <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+                        <div class="alert-warning-card">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Esta acción eliminará el producto de forma permanente.</span>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label class="field-label">Nombre</label>
+                                <input asp-for="Producto.Nombre" class="field-input" readonly />
+                            </div>
+
+                            <div class="form-field">
+                                <label class="field-label">Precio</label>
+                                <input asp-for="Producto.Precio" class="field-input" readonly />
+                            </div>
+
+                            <div class="form-field">
+                                <label class="field-label">Stock</label>
+                                <input asp-for="Producto.Stock" class="field-input" readonly />
+                            </div>
+
+                            <div class="form-field">
+                                <label class="field-label">Código de barras</label>
+                                <input asp-for="Producto.CodigoBarras" class="field-input" readonly />
+                            </div>
+
+                            <div class="form-field full-width">
+                                <label class="field-label">Descripción</label>
+                                <textarea asp-for="Producto.Descripcion" class="field-input" rows="3" readonly></textarea>
+                            </div>
+                        </div>
+
+                        <div class="action-bar">
+                            <a asp-page="./Index" class="btn btn-outline-secondary">
+                                <i class="fas fa-times"></i> Cancelar
+                            </a>
+                            <div class="action-group">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i> Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

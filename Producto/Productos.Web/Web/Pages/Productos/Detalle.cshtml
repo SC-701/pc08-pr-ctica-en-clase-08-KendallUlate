@@ -1,0 +1,123 @@
+﻿@page "{id:guid}"
+@model Web.Pages.Productos.DetalleModel
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="detail-card">
+
+                <div class="detail-header">
+                    <div class="header-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="header-title">
+                        <h1>Detalle del producto</h1>
+                        <p>Información completa del producto seleccionado</p>
+                    </div>
+                </div>
+
+                <div class="detail-body">
+
+                    <div class="product-name-section">
+                        <h2>@Model.Producto.Nombre</h2>
+                        <div class="product-tags">
+                            <span class="tag tag-category">@Model.Producto.Categoria</span>
+                            <span class="tag tag-subcategory">@Model.Producto.SubCategoria</span>
+                        </div>
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-item price-item">
+                            <div class="item-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">Precio CRC</span>
+                                <span class="item-value text-success">₡ @Model.Producto.Precio.ToString("N2")</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item price-item">
+                            <div class="item-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">Precio USD</span>
+                                <span class="item-value text-primary">$ @Model.Producto.PrecioUSD.ToString("N2")</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="item-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">Stock</span>
+                                <span class="item-value stock @(Model.Producto.Stock > 0 ? "stock-ok" : "stock-low")">
+                                    @Model.Producto.Stock unidades
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="item-icon">
+                                <i class="fas fa-barcode"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">Código de barras</span>
+                                <span class="item-value barcode-text">@Model.Producto.CodigoBarras</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item full-row">
+                            <div class="item-icon">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">ID del producto</span>
+                                <span class="item-value id-text">@Model.Producto.Id</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item full-row description-item">
+                            <div class="item-icon">
+                                <i class="fas fa-align-left"></i>
+                            </div>
+                            <div class="item-content">
+                                <span class="item-label">Descripción</span>
+                                <div class="description-text">
+                                    @if (string.IsNullOrEmpty(Model.Producto.Descripcion))
+                                    {
+                                        <span class="text-muted">Sin descripción</span>
+                                    }
+                                    else
+                                    {
+                                        @Model.Producto.Descripcion
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="action-bar">
+                                <a asp-page="./Index" class="btn btn-outline-secondary">
+                                    <i class="fas fa-arrow-left"></i> Volver
+                                </a>
+                                <div class="action-group">
+                                    <a asp-page="./Editar" asp-route-id="@Model.Producto.Id" class="btn btn-primary">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </a>
+                                    <a asp-page="./Eliminar" asp-route-id="@Model.Producto.Id" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </a>
+                                </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
