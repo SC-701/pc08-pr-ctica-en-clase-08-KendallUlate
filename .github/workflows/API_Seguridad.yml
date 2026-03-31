@@ -47,7 +47,6 @@ jobs:
           dotnet restore "Reglas/Reglas.csproj"
           dotnet restore "Helpers/Helpers.csproj"
           dotnet restore "API/API.csproj"
-          dotnet restore "Servicios/Servicios.csproj"
 
       - name: Compilar
         run: |
