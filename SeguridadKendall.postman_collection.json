@@ -1,0 +1,120 @@
+{
+  "info": {
+    "_postman_id": "610b6d81-df11-462a-9398-85120e8d22b4",
+    "name": "SeguridadKendall",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42480059"
+  },
+  "item": [
+    {
+      "name": "RegistrarUsuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreUsuario\": \"Prueba\",\r\n  \"passwordHash\": \"ff960cb55673958c594d0daaab1e368651c75c02f9687192a1811e7b180336a7\",\r\n  \"correoElectronico\": \"user@prueba.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7253/api/Usuario/RegistrarUsuario",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7253",
+          "path": [
+            "api",
+            "Usuario",
+            "RegistrarUsuario"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ObtenerInfoUsuario",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE1OWMyZDE0LTA3MzQtNDE3Yy1hYjkwLWY1NGY5YTYwMzRkYSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJQcnVlYmEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ1c2VyQHBydWViYS5jb20iLCJleHAiOjE3NzMzNjgxNjEsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6ImxvY2FsaG9zdCJ9.Quwee1aaDHJaPfJ-_FNmjF4Nq8DmldlsxyLqYnU3I5A",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreUsuario\": \"Prueba\",\r\n  \"passwordHash\": \"ff960cb55673958c594d0daaab1e368651c75c02f9687192a1811e7b180336a7\",\r\n  \"correoElectronico\": \"user@prueba.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7253/api/Usuario/ObtenerInformacionUsuario",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7253",
+          "path": [
+            "api",
+            "Usuario",
+            "ObtenerInformacionUsuario"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE1OWMyZDE0LTA3MzQtNDE3Yy1hYjkwLWY1NGY5YTYwMzRkYSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJQcnVlYmEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ1c2VyQHBydWViYS5jb20iLCJleHAiOjE3NzMzNjgxNjEsImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6ImxvY2FsaG9zdCJ9.Quwee1aaDHJaPfJ-_FNmjF4Nq8DmldlsxyLqYnU3I5A",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreUsuario\": \"Prueba\",\r\n  \"passwordHash\": \"ff960cb55673958c594d0daaab1e368651c75c02f9687192a1811e7b180336a7\",\r\n  \"correoElectronico\": \"user@prueba.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7253/api/Autenticacion/login",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7253",
+          "path": [
+            "api",
+            "Autenticacion",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
